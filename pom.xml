@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wddlhyss.springcloud</groupId>
+    <groupId>com.wddlhyss.com.wddlhyss.springcloud</groupId>
     <artifactId>springcloudtest</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -13,6 +13,9 @@
         <module>cloud-provide-payment8001</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-eureka-server7002</module>
+        <module>cloud-provide-payment8002</module>
     </modules>
 
     <properties>
@@ -38,7 +41,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--springcloud Hoxton.SR3-->
+            <!--com.wddlhyss.springcloud Hoxton.SR3-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -46,7 +49,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--springcloud alibaba2.2.0.release-->
+            <!--com.wddlhyss.springcloud alibaba2.2.0.release-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>

@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 #服务名称
 spring:
@@ -23,8 +23,13 @@ eureka:
     #是否从eureka中抓取已有的注册信息，默认为true 单节点无所谓集群必须设置为true才能配合ribbon使用负载均衡
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka
+      defaultZone: http://localhost:7001/eureka
       #defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
   instance:
-    instance-id: payment8001
+    instance-id: payment8002
+    #访问路径可以显示IP地址
     prefer-ip-address: true
+    #eureka客户端向服务端发送心跳的时间间隔，单位为秒（默认为30s）
+    lease-renewal-interval-in-seconds: 1
+    #eureka服务端在收到最后一次心跳等待的时间上限，单位为秒（默认为90s），超时剔除服务
+    lease-expiration-duration-in-seconds: 2
