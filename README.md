@@ -12,3 +12,6 @@ java 8
 maven 3.5以上
 
 mysql 5.7以上
+
+8001，8002，80链接在eureka7001，7002上
+8004，zk80连接在zookeeper上
