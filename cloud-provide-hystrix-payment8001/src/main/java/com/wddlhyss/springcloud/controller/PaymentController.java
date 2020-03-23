@@ -21,19 +21,26 @@ public class PaymentController {
     private String serverport;
 
     @GetMapping(value = "/payment/hystix_ok/{id}")
-    public String paymentInfo_ok(@PathVariable("id") Integer id){
+    public String paymentInfo_ok(@PathVariable("id") Integer id) {
         String result = paymentService.paymentInfo_ok(id);
         log.info(result);
         return result;
     }
 
     @GetMapping(value = "/payment/hystix_timeout/{id}")
-    public String paymentInfo_timeout(@PathVariable("id") Integer id){
+    public String paymentInfo_timeout(@PathVariable("id") Integer id) {
 
         String result = paymentService.paymentInfo_timeout(id);
         log.info(result);
         return result;
     }
 
+    //===服务熔断
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("*********result:" + result);
+        return result;
+    }
 
 }
