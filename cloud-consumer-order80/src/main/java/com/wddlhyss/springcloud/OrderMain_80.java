@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
+@SuppressWarnings("ALL")
 @SpringBootApplication
 @EnableEurekaClient
 @RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = MyRule.class)

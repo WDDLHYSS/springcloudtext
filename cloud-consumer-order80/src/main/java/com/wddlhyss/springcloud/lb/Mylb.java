@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@SuppressWarnings("ALL")
 @Component
 public class Mylb implements LoadBalancer {
 
