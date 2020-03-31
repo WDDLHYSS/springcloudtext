@@ -1,0 +1,17 @@
+server:
+  port: 3377
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml        #zhidingyml格式的文件配置
+        group: TEST_GROUP
+        namespace: dc81ae91-c8c3-442b-9ba2-3d2c68bdac92  #命名空间（粘贴命名空间的流水id）
+
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+# nacos-config-client-test.yaml
